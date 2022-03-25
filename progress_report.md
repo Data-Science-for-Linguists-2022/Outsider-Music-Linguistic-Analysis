@@ -25,3 +25,19 @@ Emma McKibbin | LING 1340
 
 ### The Data Sharing Problem
 Because the musician files and the pickled data frame are somewhat large and the data is fairly accessible (and fairly static in nature) through the Genius API, I have decided not to publish it but to maintain snippets of the data in presentation, as well as the Crispin Glover JSON included in `data_samples`, for reference to the JSON file structure.  I will include the manually edited list of 111 artists from Wikipedia, which will help anyone interested in the future to gather the same data as I did, through the API.
+
+## 2nd Progress Report:
+### Data Cleaning
+
+#### **3/24/22:**
+- **Reorganized Repository:** Created the `scripts_&_analysis` folder to contain all of my collection, cleaning, and analysis scripts.
+- **Updated README:** Added a directory to the [README.md](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/README.md).
+  - NOTE: The scripts and analysis links are broken (unlinked) at the moment and will **need updated** after I push changes to the repository.
+
+### Found Data Sharing Scheme
+In order to avoid infringing upon Genius's copyright on lyrics, I will keep a majority of my data unpublished.  I have shared the [`Lyrics_CrispinGlover.json`](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/data_samples/Lyrics_CrispinGlover.json) as an example of the file structure returned from `1_lyricsgenius_requests.ipynb`.  I have avoided flashing large portions of the lyric data frame in my notebooks, and since little productive work could be done on a small (5-item) sample data frame, it doesn't seem worth it to include it as a data sample.
+
+### Repository License
+I've chosen the [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/) for my repository.  I would like any code I've written that may be useful for someone else's work to remain publicly available so that, in the case that the user adjusts the code and makes improvements, lyrical analysis may become more streamlined and accessible.
+
+This license allows for commercial use, distribution, modification, and patent and private use, and it requires the derivative work to disclose the source, include a license and copyright notice, publish under the same license, and state changes to the original code.
