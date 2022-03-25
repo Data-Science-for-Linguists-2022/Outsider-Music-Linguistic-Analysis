@@ -2,6 +2,12 @@
 Emma McKibbin | LING 1340    
 *A Linguistic Look Inside Outsider Music*
 
+**Contents:**
+- [Set-Up](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/progress_report.md#project-set-up)
+- [Progress Report 1](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/progress_report.md#1st-progress-report)
+- [Progress Report 2](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/progress_report.md#2nd-progress-report)
+
+
 ## Project Set-Up
 #### **2/14/22:**
 - **Repository created**: .gitignore, LICENSE.md, README.md, progress_report.md, project_plan.md
@@ -14,13 +20,13 @@ Emma McKibbin | LING 1340
 
 #### **2/23/22:**
 - **Learning BeautifulSoup**: using `beautifulsoup4` and `requests` packages to retrieve and parse HTML code.
-- **Retrieved musician lists**: as a practice exercise, parsing the Wiki (111 artists). I manually edited this list, since it was manageable, to remove double quotations ("") and Wikipedia-specific parentheticals. ([wiki_musicians.py](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/wiki_musicians.py), [wikimusicians.txt](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/wikimusicians.txt))
+- **Retrieved musician lists**: as a practice exercise, parsing the Wiki (111 artists). I manually edited this list, since it was manageable, to remove double quotations ("") and Wikipedia-specific parentheticals. ([wiki_musicians.py](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/0_wiki_musicians.py), [wikimusicians.txt](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/0_wiki_musicians.txt))
 
 #### **2/26/22:**
-- **Got lyrics from Genius**: using John W. Miller's `lyricsgenius` package and the Genius API, I scraped lyrics from 70+ outsider musicians. ([lyricsgenius_requests.ipynb](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/lyricsgenius_requests.ipynb))
-- **Created data_samples directory**: includes the [Crispin Glover JSON](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/data_samples/Lyrics_CrispinGlover.json), used as an example in [lyricsgenius_requests.ipynb](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/lyricsgenius_requests.ipynb).
-- **Created a lyrics data frame**: this contains 3,338 lyrics from 63 artists and is not yet cleaned.  ([load_json_to_df.ipynb](http://localhost:8888/notebooks/Documents/DataSci/Outsider-Music-Linguistic-Analysis/load_json_to_df.ipynb))
-- **Began data exploration and cleaning**: 202 lyric entries were empty strings, now NaN.  The artist distribution is also very skewed--there are hundreds of songs from a handful of artists and 1 or 2 from many artists (almost Zipfian). ([data_cleaning_and_exploration.ipynb](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/data_cleaning_and_exploration.ipynb))
+- **Got lyrics from Genius**: using John W. Miller's `lyricsgenius` package and the Genius API, I scraped lyrics from 70+ outsider musicians. ([lyricsgenius_requests.ipynb](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/1_lyricsgenius_requests.ipynb))
+- **Created data_samples directory**: includes the [Crispin Glover JSON](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/data_samples/Lyrics_CrispinGlover.json), used as an example in [lyricsgenius_requests.ipynb](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/1_lyricsgenius_requests.ipynb).
+- **Created a lyrics data frame**: this contains 3,338 lyrics from 63 artists and is not yet cleaned.  ([load_json_to_df.ipynb](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/2_load_json_to_df.ipynb))
+- **Began data exploration and cleaning**: 202 lyric entries were empty strings, now NaN.  The artist distribution is also very skewed--there are hundreds of songs from a handful of artists and 1 or 2 from many artists (almost Zipfian). ([data_cleaning_and_exploration.ipynb](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/3_data_cleaning_and_exploration.ipynb))
 
 
 ### The Data Sharing Problem

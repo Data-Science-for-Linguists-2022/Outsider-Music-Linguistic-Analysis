@@ -14,11 +14,11 @@ This project aims to identify linguistic characteristics common among songs in t
 - [`progress_report.md`](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/progress_report.md) - Updates on changes to the repository, from conception to completion.
 
 ### Scripts & Analysis
-- [`0_wiki_musicians.py`]() - Script used to retrieve outsider musician names from the [Wikipedia page](https://en.wikipedia.org/wiki/Category:Outsider_musicians).
-- [`0_wiki_musicians.txt`]() - Output of the script above. Manually edited to remove double quotes.
-- [`1_lyricsgenius_requests.ipynb`]() - Retrieves lyrics in JSON format from Genius.
-- [`2_load_json_to_df.ipynb`]() - Reads the lyrics from JSON form into a pandas Data Frame.
-- [`3_data_cleaning_and_exploration.ipynb`]() - Looking at basic statistics of the Data Frame and cleaning the lyric data.
+- [`0_wiki_musicians.py`](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/0_wiki_musicians.py) - Script used to retrieve outsider musician names from the [Wikipedia page](https://en.wikipedia.org/wiki/Category:Outsider_musicians).
+- [`0_wiki_musicians.txt`](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/0_wiki_musicians.txt) - Output of the script above. Manually edited to remove double quotes.
+- [`1_lyricsgenius_requests.ipynb`](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/1_lyricsgenius_requests.ipynb) - Retrieves lyrics in JSON format from Genius.
+- [`2_load_json_to_df.ipynb`](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/2_load_json_to_df.ipynb) - Reads the lyrics from JSON form into a pandas Data Frame.
+- [`3_data_cleaning_and_exploration.ipynb`](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/3_data_cleaning_and_exploration.ipynb) - Looking at basic statistics of the Data Frame and cleaning the lyric data.
 
 ### Data Samples
 - Folder containing small snippets of the scraped data. I've refrained from publishing multiple samples so as not to violate any lyrics site copyrights.
