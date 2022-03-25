@@ -33,9 +33,17 @@ Because the musician files and the pickled data frame are somewhat large and the
 - **Reorganized Repository:** Created the `scripts_&_analysis` folder to contain all of my collection, cleaning, and analysis scripts.
 - **Updated README:** Added a directory to the [README.md](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/README.md).
   - NOTE: The scripts and analysis links are broken (unlinked) at the moment and will **need updated** after I push changes to the repository.
+  - I have also not un-deaded the two links that Sean and Caroline noticed.  I will fix these after this report submission!
+
+#### **3/25/22:**
+**NOTE:** Changes for data cleaning and initial analysis (Progress Report 2) are located in the `3_data_cleaning_and_exploration.ipynb` file, initially created for Progress Report 1.  When I reach the outsider-insider music comparison, that task will likely be stored in a separate notebook.
+- **Finished Cleaning Data:** Fixed formatting issues present in the lyric data.  Identified issues with non-empty strings that were not lyrics ("Embed", "Transcription in progess...", etc.).
+- Tried to identify non-English lyrics, but it proved too difficult, since some English songs included non-English characters.  It was useful in recognizing formatting issues that I had not anticipated.
+- **Started Token Analysis:** Created the `tokens`, `token_ct`, `type_ct`, and `TTR` columns for analysis.  Quickly checked the distribution of `token_ct` over the data.
+
 
 ### Found Data Sharing Scheme
-In order to avoid infringing upon Genius's copyright on lyrics, I will keep a majority of my data unpublished.  I have shared the [`Lyrics_CrispinGlover.json`](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/data_samples/Lyrics_CrispinGlover.json) as an example of the file structure returned from `1_lyricsgenius_requests.ipynb`.  I have avoided flashing large portions of the lyric data frame in my notebooks, and since little productive work could be done on a small (5-item) sample data frame, it doesn't seem worth it to include it as a data sample.
+In order to avoid infringing upon Genius's copyright on lyrics, I will keep a majority of my data unpublished.  I have shared the [`Lyrics_CrispinGlover.json`](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/data_samples/Lyrics_CrispinGlover.json) as an example of the file structure returned from `1_lyricsgenius_requests.ipynb`.  I have avoided flashing large portions of the lyric data frame in my notebooks, and since little productive work could be done on a small (5-item) sample data frame, it doesn't seem worth it to include it as a data sample.  In the process of data cleaning, I have flashed entire lyric texts -- I think it's somewhat necessary to see the formatting issues that I was encountering and needed to change.  There are only a few example texts flashed.
 
 ### Repository License
 I've chosen the [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/) for my repository.  I would like any code I've written that may be useful for someone else's work to remain publicly available so that, in the case that the user adjusts the code and makes improvements, lyrical analysis may become more streamlined and accessible.
