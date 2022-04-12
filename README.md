@@ -26,3 +26,6 @@ This project aims to identify linguistic characteristics common among songs in t
 
 ### Images
 - Folder containing saved images of graphs produced during .ipynb analysis, to be included in final presentation
+
+## Guestbook:
+My [guestbook](https://github.com/Data-Science-for-Linguists-2022/Class-Lounge/blob/main/guestbooks/guestbook_emma.md) is where classmates leave comments, questions, and suggestions about this repository!
