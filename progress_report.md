@@ -27,7 +27,7 @@ Emma McKibbin | LING 1340
 - **Got lyrics from Genius**: using John W. Miller's `lyricsgenius` package and the Genius API, I scraped lyrics from 70+ outsider musicians. ([lyricsgenius_requests.ipynb](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/1_lyricsgenius_requests.ipynb))
 - **Created data_samples directory**: includes the [Crispin Glover JSON](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/data_samples/Lyrics_CrispinGlover.json), used as an example in [lyricsgenius_requests.ipynb](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/1_lyricsgenius_requests.ipynb).
 - **Created a lyrics data frame**: this contains 3,338 lyrics from 63 artists and is not yet cleaned.  ([load_json_to_df.ipynb](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/2_load_json_to_df.ipynb))
-- **Began data exploration and cleaning**: 202 lyric entries were empty strings, now NaN.  The artist distribution is also very skewed--there are hundreds of songs from a handful of artists and 1 or 2 from many artists (almost Zipfian). ([data_cleaning_and_exploration.ipynb](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/3_data_cleaning_and_exploration.ipynb))
+- **Began data exploration and cleaning**: 202 lyric entries were empty strings, now NaN.  The artist distribution is also very skewed--there are hundreds of songs from a handful of artists and 1 or 2 from many artists (almost Zipfian). ([3_data_cleaning_and_exploration.ipynb](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/3_data_cleaning_and_exploration.ipynb))
 
 
 ### The Data Sharing Problem
@@ -58,6 +58,8 @@ I've chosen the [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/) for my
 This license allows for commercial use, distribution, modification, and patent and private use, and it requires the derivative work to disclose the source, include a license and copyright notice, publish under the same license, and state changes to the original code.
 
 ## 3rd Progress Report:
+I worked in [`3_data_cleaning_and_exploration.ipynb`](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/3_data_cleaning_and_exploration.ipynb) on both data cleaning and analysis.  Language detection was another attempt to clean out non-English lyrics, and some cleaning was done on Pavlik's Billboard dataset.  I haven't gotten around to changing the `scripts_&_analysis` file name yet, but I will do so once I'm down to repo organization again!
+
 #### **4/11/2022**
 - **Added guestbook to README**
 
@@ -88,3 +90,4 @@ Because of this misclassification, I can definitively remove only Swedish and Ja
 - **Saved Graph Images**: Pie charts & box-and-whisker plots to show the two distributions (artist and token count) visualized in each dataset
 - Given enough time, I might do a short analysis of Wesley Willis vs. the rest of the Outsider Music Dataset, just to get a grasp on what characteristics of the data found in the analysis may be attributable to a skew toward Willis's works.
 - I've also tried to maintain the full datasets (including rows with null lyrics) in `...df_orig` objects so that, if time permits (which it unfortunately may not), I can do some analysis on song titles as well. 
+- As part of my final work on this project, I will need to clean up the [`3_data_cleaning_and_exploration.ipynb`](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/3_data_cleaning_and_exploration.ipynb) notebook so that it is presentable and readable (and doesn't necessarily contain every single step I took to fix and analyze the dataset, in the exact order that I did it).

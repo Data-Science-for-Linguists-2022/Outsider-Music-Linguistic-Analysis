@@ -6,6 +6,8 @@ This is Emma McKibbin's term project for LING 1340: *Data Science for Linguists*
 
 This project aims to identify linguistic characteristics common among songs in the genre of "outsider music," made by inexperienced or self-taught artists (e.g. "Tiptoe Through the Tulips with Me" by Tiny Tim).  Are outsider lyrics as childlike, nonsensical, or repetitive as they're thought to be?  What themes or lyrical distributions might distinguish outsider music from "insider," or popular, music?
 
+Outsider Musicians were scraped from this [Wikipedia page](https://en.wikipedia.org/wiki/Category:Outsider_musicians), lyrics were scraped from Genius.com using the [Genius API](https://docs.genius.com/), and the comparison dataset was taken from Kaylin Pavlik's ["50 Year of Pop Music"](https://github.com/walkerkq/musiclyrics) analysis.
+
 ## Directory:
 ### What's this all about?
 - [`README.md`](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/README.md) - Includes a short project summary, directory (how meta), and important links!
