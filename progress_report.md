@@ -71,6 +71,20 @@ Because of this misclassification, I can definitively remove only Swedish and Ja
 *I felt that removing the Japanese data, at least, was important, given that the script is in characters, meaning that it won't be counted and analyzed the same way as an alphabetical orthographic system.*
 
 #### **4/12/2022**
-- **Used spaCy LanguageDetector** to identify the languages of each song's lyrics.  Once again, not a totally definitive solution, but it could be helpful down the line if it appears that non-English data is confounding the analysis.
+- **Used spaCy LanguageDetector** to identify the languages of each song's lyrics.  Once again, not a totally definitive solution, but it could be helpful down the line if it appears that non-English data is confounding the analysis.  At this point, this step seems like a bit of a time-waste, but I'm glad I got to at least get familiar with spaCy.
 - **Basic Outsider Music Analysis**: Looked into the artist distribution, duplicates, song length, and the most common words (with and without stopwords & punctuation).
 - I'm noticing more issues with the data cleaning, but it appears it will never be completely done without a lot of manual selection.  In the interesting of time and consistency, I will try to ignore most issues from here on out (looking most specifically at "Needs to be Transcribed" on that particular Viper song).
+
+#### **4/13/2022**
+- **Fixed duplicate lyrics**: I noticed that certain songs were duplicates of the songs directly before them in the data frame, and when I went to investigate on Genius, I found that these duplicates should actually be empty strings.  Somehow, replacing empty strings ("") with `None` caused it to duplicate the lyrics above.  After some troubleshooting, I resolved this issue by *not* replacing empty strings with None and later excluding the empty strings themselves.
+- **Imported Pavlik's Billboard Hot 100 Corpus**: ["50 Years of Pop Music"](https://www.kaylinpavlik.com/50-years-of-pop-music/) 
+  - Cleaned data to remove missing lyrics & instrumentals.
+  - Investigated possible issues, including mistakenly concatenated words (likely cause by removing newlines, rather than replacing, as discussed in class).
+  - Tokenized lyrics & created `tokens`, `token_ct`, `type_ct`, and `TTR` columns.
+  - Ran comparable statistics: looked at token count distribution and artist distribution, as well as most common words (including and excluding stopwords).
+      - Other things to analyze could be: Type-Token Ratio comparison among equally sized lyric sets (~150 tokens, since both means are ~200-300 tokens)
+      - Google kband analysis
+  - Found issues with the formatting that may be necessary to conform to in my own collected data (e.g., no apostrophes or punctuation).  If I am to run a Naive Bayes classifier on this data, ideally, the most informative features shouldn't be punctuation!
+- **Saved Graph Images**: Pie charts & box-and-whisker plots to show the two distributions (artist and token count) visualized in each dataset
+- Given enough time, I might do a short analysis of Wesley Willis vs. the rest of the Outsider Music Dataset, just to get a grasp on what characteristics of the data found in the analysis may be attributable to a skew toward Willis's works.
+- I've also tried to maintain the full datasets (including rows with null lyrics) in `...df_orig` objects so that, if time permits (which it unfortunately may not), I can do some analysis on song titles as well. 
