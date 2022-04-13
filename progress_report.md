@@ -6,6 +6,7 @@ Emma McKibbin | LING 1340
 - [Set-Up](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/progress_report.md#project-set-up)
 - [Progress Report 1](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/progress_report.md#1st-progress-report)
 - [Progress Report 2](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/progress_report.md#2nd-progress-report)
+- Progress Report 3()
 
 
 ## Project Set-Up
@@ -55,3 +56,21 @@ In order to avoid infringing upon Genius's copyright on lyrics, I will keep a ma
 I've chosen the [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/) for my repository.  I would like any code I've written that may be useful for someone else's work to remain publicly available so that, in the case that the user adjusts the code and makes improvements, lyrical analysis may become more streamlined and accessible.
 
 This license allows for commercial use, distribution, modification, and patent and private use, and it requires the derivative work to disclose the source, include a license and copyright notice, publish under the same license, and state changes to the original code.
+
+## 3rd Progress Report:
+#### **4/11/2022**
+- **Added guestbook to README**
+
+### Language Detection
+In the feedback from the last Progress Report, Sean mentioned using a % of non-English characters to filter out non-English songs, as opposed to a binary "contains" or "does not contain."  I tried this out, but it seems that the method I was using deems certain punctuation as non-English characters, meaning lyrics with a lot of punctuation that might fall under that category will be falsely marked as non-English.  It was also difficult to find a cutoff percentage that would correctly split the English from the mostly non-English lyrics.
+
+Instead, I decided to try out spaCy's `langdetect` library, which could, at the very least, more reliably identify English lyrics.  This was at the expense of losing some English lyric data, as shown in `3_data_cleaning_and_exploration`, where a cover of "Deck the Halls" was identified as Spanish language data, due to the high frequency of "la".  After visually analyzing the lyrics that were identified as non-English languages, I discovered that many English or non-sense lyrics were misidentified.
+
+Because of this misclassification, I can definitively remove only Swedish and Japanese lyrics.  I will leave the other non-English data in for now, in the hopes that it is in a small enough quantity that it won't confound the analysis.  If it appears that this is not the case and the analysis may be compromised, I will resort to using only the data identified as English ('en'), but I would like to avoid this, since it will eliminate some of the non-sense or idiosyncratic lyrics that could help characterize outsider music.
+
+*I felt that removing the Japanese data, at least, was important, given that the script is in characters, meaning that it won't be counted and analyzed the same way as an alphabetical orthographic system.*
+
+#### **4/12/2022**
+- **Used spaCy LanguageDetector** to identify the languages of each song's lyrics.  Once again, not a totally definitive solution, but it could be helpful down the line if it appears that non-English data is confounding the analysis.
+- **Basic Outsider Music Analysis**: Looked into the artist distribution, duplicates, song length, and the most common words (with and without stopwords & punctuation).
+- I'm noticing more issues with the data cleaning, but it appears it will never be completely done without a lot of manual selection.  In the interesting of time and consistency, I will try to ignore most issues from here on out (looking most specifically at "Needs to be Transcribed" on that particular Viper song).
