@@ -54,12 +54,22 @@ The language detection output was used to remove Japanese data, Swedish data, an
 
 ### 5. Analysis
 
-#### 5.1 Outsider Music vs. Pop Music
+#### 5.1 [Outsider Music](https://nbviewer.org/github/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/3_data_cleaning_and_exploration.ipynb#Analysis-of-Outsider-Music) vs. [Pop Music](https://nbviewer.org/github/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/3_data_cleaning_and_exploration.ipynb#Analysis-of-Popular-Music)
+I started by comparing the outsider music token distribution and twenty most common words to the same statistics in a popular music dataset.  The dataset I chose to work with is Kaylin Pavlik's ["50 Years of Pop Music"](https://github.com/walkerkq/musiclyrics) dataset, where she has compiled the lyrics of the Billboard Hot 100 over 51 years.
+
+##### Token Distribution
+
 ![png](images/outsider_token_count_dist.png)
 ![png](images/pop_token_count_dist.png)
 
+First, note that there are scale differences on these two visualizations.  With that in mind, it appears that the means are not too different, with outsider music being a bit shorter on average (mean = 215 tokens) and pop music being a bit longer (mean = 330 tokens).  However, outsider music covers a music larger range of song lengths, with the longest song at 2,115 tokens and the shortest at 1, while popular music has a longest song of 1,158 tokens and a shortest song with 5 tokens.  Popular music is ever-so-slightly more distributed around its mean, with less distant outliers, so its distribution is more evenly spread that the outsider music data.
+
+##### Most Common Words
 ![png](images/out_most_common_words_nostops.png)
 ![png](images/pop_most_common_words_nostops.png)
+Without stopwords, the two lists of most common words look fairly similar.  Note that I was unable to remove the words "cant" and "im" from the popular music list even after adjusting removing apostrophes from the stopwords list.  This is likely because the NLTK's stopwords expect that the text has been properly tokenized with the NLTK tokenizer, which splits words at apostrophes, whereas Pavlik's data already had all apostrophes removed.
+
+What is important for the ensuing discussion are the 5th and 16th most common words in the outsider music data: "rock" and "ass."  Note that neither of these appear on the list of most common words for popular music, and despite being rather unusual, they occur more often in the lyrics than very common and expected words like "go," "oh," or "yeah."
 
 #### 5.2 The Distribution Dilemma
 ![png](images/outsider_artist_dist_fig.png)
