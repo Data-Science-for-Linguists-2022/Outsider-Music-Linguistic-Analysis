@@ -8,7 +8,7 @@ May 1, 2022
 2. [What is Outsider Music?](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/final_report.md#2-what-is-outsider-music)
 3. [Data collection](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/final_report.md#3-data-collection)
 4. [Data Cleaning](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/final_report.md#4-data-cleaning)
-    - 4.1 Language Detection
+    - 4.1 [Language Detection](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/final_report.md#41-language-detection)
 5. [Analysis](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/final_report.md#5-analysis)    
     - 5.1 [Outsider Music vs. Pop Music](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/final_report.md#51-outsider-music-vs-pop-music)    
     - 5.2 [The Distribution Dilemma](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/final_report.md#52-the-distribution-dilemma)    
@@ -128,5 +128,5 @@ Although this project did not quite accomplish what it set out to do at its conc
 - Wikipedia - Outsider musicians category
 - Pavlik - Billboard hot 100 Corpus
 - John W. Miller lyricsgenius
-- Genius.daniel_johnston_most_common_words
+- Genius.com
 - Beautiful soup
