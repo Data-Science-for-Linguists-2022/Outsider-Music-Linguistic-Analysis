@@ -65,8 +65,10 @@ I started by comparing the outsider music token distribution and twenty most com
 First, note that there are scale differences on these two visualizations.  With that in mind, it appears that the means are not too different, with outsider music being a bit shorter on average (mean = 215 tokens) and pop music being a bit longer (mean = 330 tokens).  However, outsider music covers a music larger range of song lengths, with the longest song at 2,115 tokens and the shortest at 1, while popular music has a longest song of 1,158 tokens and a shortest song with 5 tokens.  Popular music is ever-so-slightly more distributed around its mean, with less distant outliers, so its distribution is more evenly spread that the outsider music data.
 
 ##### Most Common Words
+
 ![png](images/out_most_common_words_nostops.png)
 ![png](images/pop_most_common_words_nostops.png)
+
 Without stopwords, the two lists of most common words look fairly similar.  Note that I was unable to remove the words "cant" and "im" from the popular music list even after adjusting removing apostrophes from the stopwords list.  This is likely because the NLTK's stopwords expect that the text has been properly tokenized with the NLTK tokenizer, which splits words at apostrophes, whereas Pavlik's data already had all apostrophes removed.
 
 What is important for the ensuing discussion are the 5th and 16th most common words in the outsider music data: "rock" and "ass."  Note that neither of these appear on the list of most common words for popular music, and despite being rather unusual, they occur more often in the lyrics than very common and expected words like "go," "oh," or "yeah."
@@ -91,13 +93,24 @@ Seeing how well-distributed the popular music dataset is makes it much clearer h
 The graph above shows that the top 3 artists in the outsider music data, Wesley Willis, Jandek, and Daniel Johnston, represent nearly 40% of the data, while the remaining 59 artists only represent 60%.  This skew may not be so alarming if these top three artists produced exceptionally diverse discographies, but each artist has their own idiosyncrasies and style that they adhere to.  Wesley Willis, especially, formats his lyrics in a very similar manner across all 561 of his songs in this dataset, meaning this format and repetition overwhelms the diversity of the other artists' data.
 
 #### 5.3 Outsider Music Internal Analysis
-Because the skew was so apparent, I wanted to take a deeper look into 
+Because the skewed distribution was so apparent, I wanted to take a deeper look into how this skew might have affected the initial outsider versus popular music comparison.  In the [Jupyter notebook](https://nbviewer.org/github/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/scripts_%26_analysis/3_data_cleaning_and_exploration.ipynb#Breakdown-by-Most-Represented-Outsider-Musicians), I coded visualizations for both token distribution *and* the most common words, but for the sake of brevity, we'll only look at the most common words here.
+
+First, I compared Wesley Willis against the other outsider music data.
+
 ![png](images/otherout_most_common_words_nostops.png)
 ![png](images/willis_most_common_words_nostops.png)
+
+Unsurprisingly, Willis's two most common words are "rock" and "ass," while the other outsider music doesn't represent either of those tokens in its top 20, which is overall fairly tame.  To demonstrate this disparity further, "rock" comprised 0.048% of the non-Wesley Willis data and 2.6% of Willis's lyric data, making "rock" 50 times more common in Willis's music than in the music of other outsider artists.  "Ass" followed a similar pattern, making up 0.02% of the non-Wesley Willis data and 0.14% of the Wesley Willis data.
+
+Next, I wanted to look into the possible effects of the next two most frequent artists: Jandek and Daniel Johnston.  The purpose of this investigation is to determine whether or not it was Willis's especially idiosyncratic music that skewed the data, or if the other more frequent outsider artists also played a role.
 
 ![png](images/jandek_most_common_words_nostops.png)
 ![png](images/daniel_johnston_most_common_words_nostops.png)
 ![png](images/no_top3_most_common_words_nostops.png)
+
+Even without these two artists (as well as Wesley Willis) present in the outsider dataset, the most common words are fairly similar.  Jandek's top 10 words occur in the top 20 words of the outsider dataset, even without his music present.  The same is true for Daniel Johnston, with the exception of "really," but "really" did not appear in the twenty most common words for the total dataset during the comparative analysis.
+
+This suggests that Jandek and Daniel Johnston, though heavily represented in terms of artist distribution, may not be skewing the data away from the overall trend of the rest of the dataset, whereas Wesley Willis's unique word choice and style is overrepresented and is causing inaccuracies in the overall analysis.
 
 ### 6. The Initial Plan and the Inevitable Changes
 As can be seen in my original [project plan](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/blob/main/project_plan.md), one of the primary goals of this study was to analyze outsider music data against the popular music genre and determine what sets the two apart linguistically.  However, after seeing the disparity in artist distribution between the two datasets and noticing the strange words that appeared in the most common tokens, it no longer seemed meaningful to compare the two datasets.  It was clear that something was wrong with the data I had collected and that the skew I had noticed and accepted early on had become unacceptable, at least for the purposes of my intended analysis.
@@ -107,9 +120,7 @@ A great deal of my effort in this project went to data collection and cleaning, 
 Additionally, I had looked forward to extensive visualization work but found it difficult to get to a point in the analysis where I had results to visualize.  As can be seen in my [visualizations](https://github.com/Data-Science-for-Linguists-2022/Outsider-Music-Linguistic-Analysis/tree/main/images), the graphs that I used are more or less slightly altered versions of the same three plot types, with only a few adjustments to the plotting parameters, and I struggled with adjusting pie plot labels, as can be seen in the artist distribution graphs, where the percentages begin to overlap as the slices get smaller.  Because so much of my project was focused on the data itself, the visualization aspect fell a bit to the wayside as I tried to investigate the distribution issue.
 
 ### 7. Conclusion
-... PLEASE WRITE AFTER ANALYSIS
-
-Although this project did not quite accomplish what it was intended to do at its conception, I feel that I have learned very valuable skills and lessons from working with this data.  I now know much more about the intricacies of data collection, especially the importance of distribution, and have seen how different data cleaning schemas from multiple datasets can interact, whether the effect of that interaction on accuracy was neutral or negative.  This project is the perfect starting point for the analysis of outsider music—now that I know what *not* to do, I can make progress toward a cleaner, more representative corpus of outsider music lyrics and revisit my initial project plans and goals.
+Although this project did not quite accomplish what it set out to do at its conception, I feel that I have learned very valuable skills and lessons from working with this data.  I now know much more about the intricacies of data collection, especially the importance of distribution, and have seen how different data cleaning schemas from multiple datasets can interact, whether the effect of that interaction on accuracy was neutral or negative.  This project is the perfect starting point for the analysis of outsider music—now that I know what *not* to do, I can make progress toward a cleaner, more representative corpus of outsider music lyrics and revisit my initial project plans and goals.
 
 ### 8. References
 - Britannica - Outsider artists
