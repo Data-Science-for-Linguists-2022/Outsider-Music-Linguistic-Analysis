@@ -73,11 +73,25 @@ What is important for the ensuing discussion are the 5th and 16th most common wo
 
 #### 5.2 The Distribution Dilemma
 ![png](images/outsider_artist_dist_fig.png)
+
+In the outsider music dataset, the 15 top artists comprise 83.1% of the total data, leaving only 16.9% for the remaining 47 artists.  Wesley Willis, the most frequent artist, represents more of the data than the bottom 47 artists, with 18.1%.
+
 ![png](images/pop_artist_dist_fig.png)
+
+In the popular music dataset, however, there are clearly many more artists represented.  Above, the top 15 artists are highlighted, leaving the remaining 2,320 artists collectively represented in the brown slice, making up 94% of the data.
+
 ![png](images/pop_proportional_artist_dist_fig.png)
+
+To show this in proportion to the outsider music data, where 15 artists were 24% of the total artist population, the top 24% of artists have been separated into individual colored slices.  Though this graph is horrendous to look at, it does well to illustrate that Pavlik's pop dataset is not dominated by any one artist.  Madonna, the top artist here, only contributes 33 songs to the data, which is less than 1%.
+
+Seeing how well-distributed the popular music dataset is makes it much clearer how skewed the outsider data truly is.
+
 ![png](images/top3_vs_other_artists_distribution.png)
 
+The graph above shows that the top 3 artists in the outsider music data, Wesley Willis, Jandek, and Daniel Johnston, represent nearly 40% of the data, while the remaining 59 artists only represent 60%.  This skew may not be so alarming if these top three artists produced exceptionally diverse discographies, but each artist has their own idiosyncrasies and style that they adhere to.  Wesley Willis, especially, formats his lyrics in a very similar manner across all 561 of his songs in this dataset, meaning this format and repetition overwhelms the diversity of the other artists' data.
+
 #### 5.3 Outsider Music Internal Analysis
+Because the skew was so apparent, I wanted to take a deeper look into 
 ![png](images/otherout_most_common_words_nostops.png)
 ![png](images/willis_most_common_words_nostops.png)
 
